@@ -45,14 +45,23 @@ initial begin
     $display("Alu res 4 - 5: %d", $signed(result));
 
     #10
-    
     ctrl = 6'b000010;
-
     opB = 32'hffffffff;
 
     #10
 
     $display("Alu res 4 < -1: %d", result);
+    
+    /*#10 //SLTU
+    ctrl = 6'b000011;
+    opB = 32'hfffffffc;
+    opA = 32'hffffffff;
+    #10
+    $display ("Alu res -4 < -1: %d", result);
+    #10
+    
+    ctrl =*/
+    
 
 end
 
